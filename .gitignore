@@ -17,7 +17,7 @@
 mono_crash.*
 
 # Build results
-#[Dd]ebug/
+[Dd]ebug/
 [Dd]ebugPublic/
 [Rr]elease/
 [Rr]eleases/
@@ -27,7 +27,7 @@ x86/
 [Aa][Rr][Mm]/
 [Aa][Rr][Mm]64/
 bld/
-#[Bb]in/
+#[Bb]in/  # COMMENTED OUT: Bin directories will now be tracked
 [Oo]bj/
 [Oo]ut/
 [Ll]og/
@@ -189,7 +189,7 @@ publish/
 
 # Microsoft Azure Web App publish settings. Comment the next line if you want to
 # checkin your Azure Web App publish settings, but sensitive information contained
-# in these scripts will be unencrypted
+in these scripts will be unencrypted
 PublishScripts/
 
 # NuGet Packages
@@ -361,3 +361,6 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+
+# EXCEPTION: Show .bin files (add this at the end)
+!*.bin
