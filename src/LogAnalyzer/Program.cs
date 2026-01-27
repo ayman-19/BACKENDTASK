@@ -34,11 +34,12 @@ internal class Program
         if (lines.Count > 0)
             ProcessBatch(lines, ipCounts);
 
-        // TOP 5
         var top5 = ipCounts.OrderByDescending(x => x.Value).Take(5);
 
         foreach (var ip in top5)
             Console.WriteLine($"{ip.Key} => {ip.Value}");
+
+        // summarize this in README
     }
 
     static void ProcessBatch(List<string> batch, ConcurrentDictionary<string, long> dict)
